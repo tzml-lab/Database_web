@@ -1,0 +1,170 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1rem;
+    
+}
+/* p{
+    font-size: 1em;
+} */
+.border{
+    border: 1px solid #cacaca;
+}
+div{
+    /* border: 2px solid #cacaca; */
+    /* height: 20vh; */
+    width: 80vw;
+}
+input{
+    outline: none;
+    height: 70%;
+    padding: 0 2vw;
+    width: 50%;
+
+}
+.hidden{
+    display: none;
+}
+button{
+    /* background-color: #a5a5a5 !important; */
+}
+.part{
+    height: 9vh; 
+}
+.chinese{
+    margin: 0; 
+    display: inline-block;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.projectCon{
+    width: 35%;
+    margin-right: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.thingNameContainer{
+    display: flex;
+    /* padding: 1vh 0; */
+}
+.thingCon{
+    display: flex;
+    align-items: center;
+}
+
+.typeTagContainer{
+    /* overflow: auto; */
+    display: flex;
+    padding: 1vh;
+}
+.typeTag{
+    text-align: center;
+    display: inline-block;
+    width: 20vw;
+    margin: 1vh 2vw;
+    font-size: 0.8em;
+    /* background-color: #cacaca; */
+    color: rgb(184, 184, 184);
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 20px;
+}
+.howMuchContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.IN{
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #acacac;
+    color: #acacac;
+    font-size: 1em;
+    line-height: 8vw;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 99em;
+
+}
+.OUT{
+    text-align: center;
+    line-height: 8vw;
+    /* line-height: 1em; */
+    display: inline-block;
+    border: 1px solid #acacac;
+    color: #acacac;
+    font-size: 1em;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 99em;
+} 
+.mypayCon{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 3vw;
+}
+.mypay{
+    width: 40%;
+    text-align: center;
+    font-size: 1.5em;
+    border: 1px solid rgb(184, 184, 184);
+    line-height: 1.8em;
+}
+.addOther{
+    width: 60%;
+    /* widows: 80%; */
+    border-radius: 25vw;
+    padding: 0 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.add{
+    border-radius: 99em;
+    height: 6vh;
+    width: 6vh;
+    font-size: 2em;
+    text-align: center;
+    line-height: 6vh;
+}
+.addOtherPerson{
+    width: 70%;
+    text-align: center;
+}
+.typeTag:hover{
+    background-color: #a5a5a5;
+    color: #ffffff;
+}
+.dropdown{
+    font-size: 1em !important;
+}
+.otherPeopleContauner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#test{
+    width: 50px;
+    height: 150px;
+    overflow: auto;
+}
+/* a{
+    display: inline-block !important;
+    padding: 10px !important;
+    width: 20px !important;
+} */
+.tryWidth{
+    display: flex;
+    width: 50px;
+}
+a{
+    display: inline-block !important;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "css/style.css" %}" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script defer src="{% static "js/buttonEvent.js" %}"></script>
+
+</head>
+<body>
+    <div id="container">
+        <div id="project">
+            <div id="pro_user" value={{user.uID}}>{{user.uID}}</div>
+            <div id="pro_name" value={{user.uID}}>{{new_personPorj}}</div>
+            <div class="input-group">
+                <select class="custom-select" id="inputGroupSelect04">
+                  <option selected>Choose...</option>
+                  {% for personPorj in personPorjs %}
+                  <option value={{personPorj.Name}}>{{personPorj.Name}}</option>
+                  {% endfor %}
+                  <!-- <option value="108/11">108/11月</option>
+                  <option value="108/10">108/10月</option> -->
+                </select>
+                <div class="input-group-append">
+                  <button id="choicePro" class="btn btn-outline-secondary" type="button">查詢</button>
+                </div>
+            </div>
+        </div>
+        <div id="modes">
+            <div class="mode" id="IN">收入</div>
+            <div class="mode" id="OUT">支出</div>
+            <div class="mode" id="chart">圖表</div>
+        </div>
+        <!-- 收入 -->
+        <div class = contexts id="IN_cons"style="display:none;">
+            <div id="contentTitle" class="content">
+                <div class="beforeFour" >
+                    <p class="con_date">日期</p>
+                    <p class="con_type">分類</p>
+                    <p class="con_item">品項</p>
+                    <p class="con_price">金額</p>
+                </div>
+                <div class="afterFour">
+                    <p class="con_edit">編<br>輯</p>
+                    <p class="con_del">刪<br>除</p>
+                </div>
+            </div>
+            {% for money in in_moneys %}
+            <div class="content item">
+                <div class="beforeFour" >
+                    <p class="con_date" value={{money.time}}>{{money.time}}</p>
+                    <p class="con_type">{{money.ItemType}}</p>
+                    <p class="con_item">{{money.ItemName}}</p>
+                    <p class="con_price">{{money.value}}</p>
+                </div>
+                <div class="afterFour">
+                    <a href="/addMoneyPage?uid={{user.uID}}&time={{money.time}}" width="25%" height="25%"><img width="75%" src="{% static "images/pencil.png" %}" ></a>
+                    <a width="25%" height="25%"><img width="75%" class='delete' src="{% static "images/remove.png" %}" ></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!--支出 -->
+        <div class = contexts id="OUT_cons">
+            <div id="contentTitle" class="content">
+                <div class="beforeFour" >
+                    <p class="con_date">日期</p>
+                    <p class="con_type">分類</p>
+                    <p class="con_item">品項</p>
+                    <p class="con_price">金額</p>
+                </div>
+                <div class="afterFour">
+                    <p class="con_edit">編<br>輯</p>
+                    <p class="con_del">刪<br>除</p>
+                </div>
+            </div>
+            {% for money in out_moneys %}
+            <div class="content item">
+                <div class="beforeFour" >
+                    <p class="con_date" value={{money.time}}>{{money.time}}</p>
+                    <p class="con_type">{{money.ItemType}}</p>
+                    <p class="con_item">{{money.ItemName}}</p>
+                    <p class="con_price">{{money.value}}</p>
+                </div>
+                <div class="afterFour">
+                    <a href="/addMoneyPage?uid={{user.uID}}&time={{money.time}}" width="25%" height="25%"><img width="75%" src="{% static "images/pencil.png" %}"></a>
+                    <a width="25%" height="25%"><img width="75%" class='delete' src="{% static "images/remove.png" %}" ></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- 圖表 -->
+        <div class = contexts id="CHART_cons"style="display:none;">
+            <div><p>我是圖表本人</p></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

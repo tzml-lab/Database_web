@@ -1,0 +1,111 @@
+#container{
+    margin:0px auto;
+    margin-top: 2%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+#modes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* .contexts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+#project{
+    display: flex;
+    flex-direction: row;
+    
+}
+#pro_user, #pro_name{
+    font-size: 0.5rem;
+    width: 20%;
+    text-align: center;
+    line-height: 100%;
+}
+#pro_txt p{
+    text-align: center;
+    line-height: 100%;
+}
+.input-group{
+    margin-left: 5%;
+
+}
+#inputGroupSelect04{
+    height: 100%;
+}
+
+#modes{
+    margin-top: 5%;
+}
+.mode{
+    font-size: 0.9rem;
+    border-bottom:  0.1rem solid rgb(172, 170, 170);
+}
+#OUT{
+    border-bottom:  0.1rem solid rgb(255, 174, 0);
+}
+.contexts{
+    margin-top: 2%;
+    display: flex;
+    padding-top: 0%;
+    padding-bottom: 2%;
+    flex-direction: column;
+    justify-content: center;
+}
+#contentTitle{
+    border-style: dashed;
+}
+.content{ 
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.con_date, .con_type, .con_price{
+    width: 23%;
+}
+.con_item{
+   width: 31%;
+}
+
+.con_edit, .con_del{
+    flex: 1;
+    font-size: 0.9rem;
+}
+.beforeFour{
+    /* height: 100%; */
+    flex:5;
+    display: flex;
+    justify-content: space-around;;
+    align-items: center;
+}
+.afterFour{
+    height: 100%;
+    flex:1;
+    display: flex;
+    justify-content: space-around;
+}
+p{
+    display: inline-block;
+    margin: 0px !important;
+    line-height: 1rem !important;
+
+}
+.item{
+    margin-top: 2%;
+    padding-bottom: 2%;
+    font-size: 0.8rem;
+    border-bottom: #17a2b8 dashed 0.1rem;
+}
+
+.item div p,.item div p img{
+    height: 100%;
+    display: inline-block;
+    margin: 0px !important;
+    line-height: 0.8rem !important;
+}
